@@ -1,0 +1,82 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+\subsection{Wärmekapazität des Kalorimeters}
+Um die spezifische Wärmekapazität der Stoffe aus den Messdaten bestimmen
+zu können wird zunächst die Wärmekapazität des Kalorimeters benötigt,
+in welchem die Messungen durchgeführt wurden. Hierzu wurde \ref{sec:D1}
+durchgeführt und es gilt, dass die Wärmekapazität des warmen Wassers
+$c_\text{wasser}m_\text{warm}$ mal der Temperaturdifferenz des warmen Wassers
+$T_\text{warm}$ und der Mischtemperatur $T_\text{gemischt}$ gleich der
+Temperaturdifferenz des kalten Wassers $T_\text{kalt}$ und $T_\text{gemischt}$
+mal der Wärmekapazität des kalten Wassers $c_\text{wasser}m_\text{kalt}$
+und der des Kalorimeters $c_\symup{g}m_\symup{g}$ ist.
+\begin{gather}
+  \left(c_\text{wasser}m_\text{kalt}+c_\symup{g}m_\symup{g}\right)
+  \left(T_\text{gemischt}-T_\text{kalt}\right)
+  = c_\text{wasser}m_\text{warm}\left(T_\text{warm}-T_\text{gemischt}\right)\\
+  \intertext{Wodurch sich folgendes für $c_\symup{g}m_\symup{g}$ ergibt}
+  c_\symup{g}m_\symup{g} = \frac
+  {c_\text{wasser}m_\text{warm}\left(T_\text{warm}-T_\text{gemischt}\right)
+  -c_\text{wasser}m_\text{kalt}\left(T_\text{gemischt}-T_\text{kalt}\right)}
+  {\left(T_\text{gemischt}-T_\text{kalt}\right)}
+\end{gather}
+Durch einsetzen der Messwerte ergibt sich für die Wärmekapazität des
+Kalorimeters
+\begin{equation*}
+  c_\symup{g}m_\symup{g} = \SI{202,79}{\joule\per\kelvin}
+\end{equation*}
+
+\subsection{spezifische Wärmekapazität der einzelnen Metalle}
+Zunächst werden die Mittelwerte der jeweiligen Messungen für die
+einzelne Metalle nach \eqref{eqn:mittel} sowie deren Fehler nach \eqref{eqn:err}, unter Hilfenahme von
+Python, berechnet.
+\begin{gather}
+  \left<x\right> = \frac{1}{N}\sum_{i=1}^N x_i
+  \label{eqn:mittel}\\
+  \sigma_x = \sqrt{\frac{1}{N}\sum_{i=1}^N \left(\left<x\right>-x_i\right)^2}
+  \label{eqn:err}\\
+  \increment f = \sqrt{\sum_{j=1}^k\left(\frac{\partial f\left(x_j\right)}{\partial x_j}\cdot\sigma_j\right)^{\!\!2}}
+  \label{eqn:gauß}
+\end{gather}
+Unter Berücksichtigung von \eqref{eqn:gauß} ergibt sich durch einsetzen
+in die folgende Gleichung
+\begin{equation}
+  c_\symup{k} = \frac{\left(c_\text{wasser}m_\text{wasser}+c_\symup{g}m_\symup{g}\right)
+\left(T_\text{gemischt}-T_\text{wasser}\right)}{m_\text{metal}\left(T_\text{metal}-T_\text{gemischt}\right)}
+\end{equation}
+\begin{gather*}
+  \intertext{für Aluminium:}
+  c_k =\SI{0,72(20)}{\joule\per\gram\per\kelvin}\\
+  \intertext{für Zinn:}
+  c_k =\SI{0,27(12)}{\joule\per\gram\per\kelvin}\\
+  \intertext{für Blei:}
+  c_k =\SI{0,35(19)}{\joule\per\gram\per\kelvin}
+\end{gather*}
+
+\subsection{Atomwärme im Vergleich zum Vorhersagewert 3R}
+Im folgenden soll nun bestimmt werden, wie genau der Dulong-Petitsche
+Wert $c_\symup{V}\approx$ 3R $\approx$ \SI{24,942}{\joule\per\mol\per\kelvin}
+für den Realfall, sprich die Messung, ist. Die gemessene Atomwärme
+berechnet sich wiefolgt
+\begin{gather}
+  C_\symup{V}=C_\symup{p}-9\alpha^2\kappa V_0T\\
+  \intertext{beachte $C_\symup{p}=Mc_\symup{k}$, $V_0 = M/\rho$ und $T=T_\text{gemischt}$}
+  C_\symup{V}=Mc_\symup{k}-9\alpha^2\kappa\frac{M}{\rho}T_\text{gemischt}
+  \label{eqn:CV}
+\end{gather}
+Die Werte $\alpha$, $\kappa$, $\rho$ und $M$ sind dabei der
+Anleitung zu entnehmen. Weiterhin unter Berücksichtigung von \eqref{eqn:gauß}
+ergeben sich nun für die einzelnen Metalle die Atomwärmen und deren
+prozentuale Abweichung von der Dulong-Petitschen Konstante
+$c_\symup{V}\approx$ \SI{24,942}{\joule\per\mol\per\kelvin}
+\begin{align*}
+  \intertext{für Aluminium:}
+  C_V&=\SI{19(5)}{\joule\per\mol\per\kelvin}&
+  \text{Abweichung}&=\SI{22(22)}{\percent}\\
+  \intertext{für Zinn:}
+  C_V&=\SI{33(14)}{\joule\per\mol\per\kelvin}&
+  \text{Abweichung}&=\SI{30(60)}{\percent}\\
+  \intertext{für Blei:}
+  C_V&=\SI{70(40)}{\joule\per\mol\per\kelvin}&
+  \text{Abweichung}&=\SI{190(160)}{\percent}
+\end{align*}
