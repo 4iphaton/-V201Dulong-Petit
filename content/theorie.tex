@@ -5,7 +5,7 @@ Unter der Bedingung, dass keine Arbeit verrichtet wird, steht die spezifische
 wärmekapazität im direkten Zusammenhang mit der Wärmemenge $\increment Q$ und
 der Temperatur $\increment T$
 \begin{equation}
-  \increment Q = mc\increment T
+  \increment Q = mc_\symup{w}\increment T
 \end{equation}
 Die sogenannte Molwärme $C$ beschreibt die Kapazität eines Stoffes bezüglich
 Wärmeauf- und abnahme. Dies wird definiert durch eine bestimmte Wärmemenge
@@ -13,10 +13,46 @@ d$Q$ pro Temperatur d$T$.
 \begin{equation}
   C_\symup{V} = \left(\frac{\symup{d}Q}{\symup{d}T}\right)_{\!\!\symup{V}}
 \end{equation}
-definiert ist die Molwaerme $C$ als das Produkt von Masse $m$ und spezifischer
+Dies lässt sich nach dem 1. Hauptsatz der Thermodynamik umformen zu
+\begin{equation}
+  C_\symup{V} = \left(\frac{\symup{d}U}{\symup{d}T}\right)_{\!\!\symup{V}}
+  \label{eqn:CVdif}
+\end{equation}
+Definiert ist die Molwärme $C$ als das Produkt von Masse $m$ und spezifischer
 Waermekapazität $c$
 \begin{equation}
-  C = mc
+  C = mc_\symup{w}
 \end{equation}
+
 \subsection{Bergündung von Dulong-Petit in der klassischen Mechanik}
+Das Dulong-Petitsche Gesetz besagt, dass feste Stoffe bei hohen Temperaturen
+stets die Atomwärme
+\begin{equation}
+  C_\symup{V}= 3\symup{R}
+\end{equation}
+mit der allgemeinen Gaskonstante R = \SI{8,314}{\joule\per\mol\per\kelvin}
+haben. Dies lässt sich durch die energetische Betrachtung der Schwingungen innerhalb
+der Gitterstruktur auf dem Weg der klassischen Mechanik herleiten.
+In einem großen Zeitraum gemittelt ergibt sich für die innere Energie pro Teilchen
+\begin{equation}
+  \left<u\right> = \left<E_\text{kin}\right> + \left<E_\text{pot}\right>
+  = 2\left<E_\text{kin}\right>
+  \label{eqn:E}
+\end{equation}
+Hierbei ist zu beachten, dass sich für die Energien der Schwingungen der gleiche
+Betrag für $\left<E_\text{kin}\right>$ und $\left<E_\text{pot}\right>$ ergibt.
+Das Äquipartitionstheorem besagt, dass die mittlere kinetische Energie eines Atoms
+pro Freiheitsgrad
+$\frac{1}{2}\symup{k}T$ beträgt. Da für die Schwingung drei Freiheitsgrade bestehen
+ergibt sich nach \eqref{eqn:E}
+\begin{equation}
+  \left<u\right> = 3\symup{k}T
+\end{equation}
+Bei Betrachtung eines Körpers mit $\symup{N}_\symup{L}$ Atomen pro mol, ergibt sich für
+seine gemittelte innere Energie unter Berücksichtigung von $\symup{N}_\symup{L}\symup{k} = \symup{R}$
+\begin{gather}
+  \left<U\right> = 3\symup{R}T\\
+  \intertext{nach \eqref{eqn:CVdif} ergibt sich}
+  C_\symup{V} = \frac{\left<U\right>}{T} = 3\symup{R}
+\end{gather}
 \subsection{Quantentheoretischer Ansatz}
