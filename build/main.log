@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.9.27)  21 OCT 2017 21:04
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.9.27)  22 OCT 2017 12:58
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -22,7 +22,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.123 seconds
+luaotfload | main : initialization completed in 0.227 seconds
 Babel <3.13> and hyphenation patterns for 1 language(s) loaded.
 (./header.tex (/home/aiphaton/.local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2017/09/07 v3.24 KOMA-Script document class (article)
@@ -2068,12 +2068,12 @@ Here is how much of LuaTeX's memory you used:
  100000,1648299 words of node,token memory allocated
  618 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 11 attribute, 77 glue_spec, 11 attribute_list, 1 write, 1 pdf_action nodes
-   avail lists: 2:1125,3:171,4:31,5:235,6:2039,7:755,8:97,9:450,10:6,11:223
+   avail lists: 2:957,3:172,4:31,5:257,6:2202,7:793,8:97,9:414,10:6,11:241
  43510 multiletter control sequences out of 65536+600000
- 110 fonts using 37558871 bytes
+ 110 fonts using 37559327 bytes
  61i,21n,104p,8833b,2499s stack positions out of 5000i,500n,10000p,200000b,100000s
 </home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/aiphaton/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (5 pages, 56589 bytes).
+Output written on main.pdf (5 pages, 56656 bytes).
 
 PDF statistics: 171 PDF objects out of 1000 (max. 8388607)
  132 compressed objects within 2 object streams
