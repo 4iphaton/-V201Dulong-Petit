@@ -30,14 +30,6 @@ Kalorimeters
 Zunächst werden die Mittelwerte der jeweiligen Messungen für die
 einzelne Metalle nach \eqref{eqn:mittel} sowie deren Fehler nach \eqref{eqn:err}, unter Hilfenahme von
 Python, berechnet.
-\begin{gather}
-  \left<x\right> = \frac{1}{N}\sum_{i=1}^N x_i
-  \label{eqn:mittel}\\
-  \sigma_x = \sqrt{\frac{1}{N}\sum_{i=1}^N \left(\left<x\right>-x_i\right)^2}
-  \label{eqn:err}\\
-  \increment f = \sqrt{\sum_{j=1}^k\left(\frac{\partial f\left(x_j\right)}{\partial x_j}\cdot\sigma_j\right)^{\!\!2}}
-  \label{eqn:gauß}
-\end{gather}
 Unter Berücksichtigung von \eqref{eqn:gauß} ergibt sich durch einsetzen
 in \eqref{eqn:ckauswertung}
 \begin{gather*}
@@ -53,13 +45,12 @@ in \eqref{eqn:ckauswertung}
 Im folgenden soll nun bestimmt werden, wie genau der Dulong-Petitsche
 Wert $c_\symup{V}\approx$ 3R $\approx$ \SI{24,942}{\joule\per\mol\per\kelvin}
 für den Realfall, sprich die Messung, ist. Die gemessene Atomwärme
-berechnet sich wiefolgt
-\begin{gather}
-  C_\symup{V}=C_\symup{p}-9\alpha^2\kappa V_0T\\
-  \intertext{beachte $C_\symup{p}=Mc_\symup{k}$, $V_0 = M/\rho$ und $T=T_\text{gemischt}$}
+berechnet sich nach \eqref{eqn:CVumf} unter Berücksichtigung von
+$C_\symup{p}=Mc_\symup{k}$, $V_0 = M/\rho$ und $T=T_\text{gemischt}$
+\begin{equation}
   C_\symup{V}=Mc_\symup{k}-9\alpha^2\kappa\frac{M}{\rho}T_\text{gemischt}
   \label{eqn:CV}
-\end{gather}
+\end{equation}
 Die Werte $\alpha$, $\kappa$, $\rho$ und $M$ sind dabei der
 Anleitung zu entnehmen. Weiterhin unter Berücksichtigung von \eqref{eqn:gauß}
 ergeben sich nun für die einzelnen Metalle die Atomwärmen und deren

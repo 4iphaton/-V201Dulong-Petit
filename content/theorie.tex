@@ -1,5 +1,14 @@
 \section{Theorie}
 \label{sec:Theorie}
+Die Mittelwerte und Fehler der Messungen werden über Python berechnet nach
+\begin{gather}
+  \left<x\right> = \frac{1}{N}\sum_{i=1}^N x_i
+  \label{eqn:mittel}\\
+  \sigma_x = \sqrt{\frac{1}{N}\sum_{i=1}^N \left(\left<x\right>-x_i\right)^2}
+  \label{eqn:err}\\
+  \increment f = \sqrt{\sum_{j=1}^k\left(\frac{\partial f\left(x_j\right)}{\partial x_j}\cdot\sigma_j\right)^{\!\!2}}
+  \label{eqn:gauß}
+\end{gather}
 \subsection{Definition: spezifische Wärmekapazität}
 Unter der Bedingung, dass keine Arbeit verrichtet wird, steht die spezifische
 wärmekapazität im direkten Zusammenhang mit der Wärmemenge $\increment Q$ und
@@ -9,7 +18,7 @@ der Temperatur $\increment T$
 \end{equation}
 Die sogenannte Molwärme $C$ beschreibt die Kapazität eines Stoffes bezüglich
 Wärmeauf- und abnahme. Dies wird definiert durch eine bestimmte Wärmemenge
-d$Q$ pro Temperatur d$T$.
+d$Q$ pro Temperatur d$T$ bei konstantem Volumen V.
 \begin{equation}
   C_\symup{V} = \left(\frac{\symup{d}Q}{\symup{d}T}\right)_{\!\!\symup{V}}
 \end{equation}
@@ -18,8 +27,13 @@ Dies lässt sich nach dem 1. Hauptsatz der Thermodynamik umformen zu
   C_\symup{V} = \left(\frac{\symup{d}U}{\symup{d}T}\right)_{\!\!\symup{V}}
   \label{eqn:CVdif}
 \end{equation}
+Konkret ergibt sich der Zusammenhang
+\begin{equation}
+    C_\symup{V}=C_\symup{p}-9\alpha^2\kappa V_0T
+    \label{eqn:CVumf}
+\end{equation}
 Definiert ist die Molwärme $C$ als das Produkt von Masse $m$ und spezifischer
-Waermekapazität $c$
+Wärmekapazität $c_\symup{w}$
 \begin{equation}
   C = mc_\symup{w}
 \end{equation}
@@ -85,6 +99,6 @@ Nach einer Taylorentwicklung ergibt sich im Grenzwert für $T$ gegen
 \begin{equation}
   \left<U_\text{qu}\right> = 3\symup{R}T
 \end{equation}
-Hierdurch ist gezeigt, dass der Dulong-Petitsche Wert $C_\symup{V}=3symup{R}$
+Hierdurch ist gezeigt, dass der Dulong-Petitsche Wert $C_\symup{V}=3\symup{R}$
 auch nach dem quantentheoretischen Ansatz eine gute Näherung für
 hohe Temperaturen ist.
