@@ -25,6 +25,7 @@ x_, mal, x_, x_, nmal, x_ = np.genfromtxt('../values/mass_val.txt', unpack=True)
 mass = mal - nmal
 
 Tw, Ts, Te, mw = np.genfromtxt('../values/zinn_val.txt', unpack=True)
+mw -=232.029
 mTw = np.mean(Tw)
 sTw = np.std(Tw)
 fTw = ufloat(mTw, sTw)
