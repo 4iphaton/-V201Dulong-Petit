@@ -1,4 +1,29 @@
-\section{Durchführung}
+\section{Aufbau und Durchführung}
 \label{sec:Durchführung}
+Das Experiment besteht aus 2 Teilen. Im ersten Teil \ref{sec:D1} soll die Wärmekapazität
+des Kalorimeters (Abbildung 2) $c_\symup{g}m_\symup{g}$ bestimmt werden um im 2.
+Teil \ref{sec:D1} durch \eqref{eqn:ckauswertung} und \eqref{eqn:CVumf} die
+spezifische Wärmekapazität $c_\symup{k}$ und den Vergleichswert $\symup{C}_\symup{V}$
+berechnen zu können.
 \subsection{Bestimmung der Wärmekapazität des Kalorimeters}
+Zunächst werden zwei verschiedene Mengen Wasser unterschiedlicher Temperatur
+im Kalorimeter zusammen gemischt.
+Es gilt, dass die Wärmekapazität des warmen Wassers
+$c_\text{wasser}m_\text{warm}$ mal der Temperaturdifferenz des warmen Wassers
+$T_\text{warm}$ und der Mischtemperatur $T_\text{gemischt}$ gleich der
+Temperaturdifferenz des kalten Wassers $T_\text{kalt}$ und $T_\text{gemischt}$
+mal der Wärmekapazität des kalten Wassers $c_\text{wasser}m_\text{kalt}$
+und der des Kalorimeters $c_\symup{g}m_\symup{g}$ ist.
+\begin{gather}
+  \left(c_\text{wasser}m_\text{kalt}+c_\symup{g}m_\symup{g}\right)
+  \left(T_\text{gemischt}-T_\text{kalt}\right)
+  = c_\text{wasser}m_\text{warm}\left(T_\text{warm}-T_\text{gemischt}\right)
+  \label{eqn:cgmg}\\
+  \intertext{Wodurch sich folgendes für $c_\symup{g}m_\symup{g}$ ergibt}
+  c_\symup{g}m_\symup{g} = \frac
+  {c_\text{wasser}m_\text{warm}\left(T_\text{warm}-T_\text{gemischt}\right)
+  -c_\text{wasser}m_\text{kalt}\left(T_\text{gemischt}-T_\text{kalt}\right)}
+  {\left(T_\text{gemischt}-T_\text{kalt}\right)}
+  \label{eqn:cgmgumf}
+\end{gather}
 \label{sec:D1}
