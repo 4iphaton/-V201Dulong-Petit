@@ -55,6 +55,9 @@ def ck(cgmg, cw, mw, mk, Tm, Tw, Tk):
 def atomwaerme(alpha, kappa, M, roh, Tm, ck):
     return (ck * M) - (9 * (alpha**2) * kappa * (M / roh) * Tm)
 
-ck = ck(cgmg(aTk, aTw, aTg, cw, amk, amw), cw, fmw, mass, fTe, fTw, fTs)
+cmgm = cgmg(aTk, aTw, aTg, cw, amk, amw)
+ck = ck(cmgm, cw, mw, mass, Te, Tw, Ts)
+print(ck)
+ck = ufloat(np.mean(ck),np.std(ck))
 CV = atomwaerme(alpha, kappa, M, roh, fTe, ck)
 print('Zinn: ck =',ck,'Joule/(g*K)     CV = ',CV,'Joule/(mol*K)       Abweichung: ',(3*8.314 - CV) / (3*8.314) * 100,'%')

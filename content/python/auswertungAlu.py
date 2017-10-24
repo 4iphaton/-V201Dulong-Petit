@@ -38,7 +38,6 @@ fTe = ufloat(mTe, sTe)
 mmw = np.mean(mw)
 smw = np.std(mw)
 fmw = ufloat(mmw, smw)
-
 aTk = const.convert_temperature(aTk,'c','K')
 aTw = const.convert_temperature(aTw,'c','K')
 aTg = const.convert_temperature(aTg,'c','K')
@@ -55,7 +54,9 @@ def ck(cgmg, cw, mw, mk, Tm, Tw, Tk):
 def atomwaerme(alpha, kappa, M, roh, Tm, ck):
     return (ck * M) - (9 * (alpha**2) * kappa * (M / roh) * Tm)
 cmgm = cgmg(aTk, aTw, aTg, cw, amk, amw)
-ck = ck(cmgm, cw, fmw, mass, fTe, fTw, fTs)
+ck = ck(cmgm, cw, mw, mass, Te, Tw, Ts)
+print(ck)
+ck = ufloat(np.mean(ck),np.std(ck))
 CV = atomwaerme(alpha, kappa, M, roh, fTe, ck)
 print('Wärmekapazität des Kalorimeters',cmgm,'Joule/K')
 print('Aluminium: ck = ',ck,'Joule/(g*K)     CV = ',CV,'Joule/(mol*K)       Abweichung: ',(3*8.314 - CV) / (3*8.314) * 100,'%')
